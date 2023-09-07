@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "luxon": "^3.4.3"
+  },
+  "name": "hngproject-1",
+  "version": "1.0.0",
+  "description": "HNG-INTERNSHIP PROJECT 1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Okononfua Mathew",
+  "license": "ISC"
+}
