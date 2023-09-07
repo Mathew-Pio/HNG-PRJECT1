@@ -21,7 +21,7 @@ app.get('/info', (req, res) => {
   };
 
   // Send the JSON response
-  return res.status(200).json(response);
+  res.status(200).json(response);
 });
 
 app.listen(port, () => {
