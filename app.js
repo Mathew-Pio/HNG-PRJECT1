@@ -5,14 +5,14 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  const { name, track } = req.query;
+  const { slack_name, track } = req.query;
   
   // Get the current time in the Nigerian time zone (UTC+1)
   const nigerianTime = DateTime.now().setZone('Africa/Lagos');
   
   // Prepare the response
   const response = {
-    slackName: name,
+    slack_name: slack_name,
     currentDay: nigerianTime.toFormat('cccc'),
     utc_Time: nigerianTime.toISO(),
     track: track,
