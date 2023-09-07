@@ -13,12 +13,12 @@ app.get('/', (req, res) => {
   // Prepare the response
   const response = {
     slack_name: slack_name,
-    currentDay: nigerianTime.toFormat('cccc'),
+    current_Day: nigerianTime.toFormat('cccc'),
     utc_Time: nigerianTime.toISO(),
     track: track,
-    githubFileURL: 'https://github.com/Mathew-Pio/HNG-PRJECT1/blob/main/app.js',
-    githubSourceCodeURL: 'https://github.com/Mathew-Pio/HNG-PRJECT1',
-    statusCode:'200'
+    github_file_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1/blob/main/app.js',
+    github_repo_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1',
+    status_Code:'200'
   };
 
   // Send the JSON response
