@@ -18,6 +18,7 @@
   "author": "Okononfua Mathew",
   "license": "ISC",
   "devDependencies": {
+    "@types/luxon": "^3.3.2",
     "nodemon": "^1.18.3"
   }
 }
