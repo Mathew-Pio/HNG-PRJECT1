@@ -13,5 +13,8 @@
     "start-server": "node app.js"
   },
   "author": "Okononfua Mathew",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
 }
