@@ -7,6 +7,9 @@
   "version": "1.0.0",
   "description": "HNG-INTERNSHIP PROJECT 1",
   "main": "app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
