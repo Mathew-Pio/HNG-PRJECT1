@@ -10,20 +10,21 @@ app.get('/api', (req, res) => {
   // Get the current time in the Nigerian time zone (UTC+1)
   const nigerianTime = DateTime.now().setZone('Africa/Lagos');
 
-  // Calculate a random offset within the +/-2 minute window
-  const randomOffset = Math.random() * 4 - 2; // Random value between -2 and 2
-  const offsetMilliseconds = randomOffset * 60 * 1000; // Convert minutes to milliseconds
-
-  // Apply the offset to the current UTC time
-  const accurateUtcTime = new Date(nigerianTime.toJSDate().getTime() + offsetMilliseconds);
-
-  const formattedUtcTime = accurateUtcTime.toISOString();
+  // The current UTC time
+  const now = new Date();
+  const year = now.getUTCFullYear();
+  const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(now.getUTCDate()).padStart(2, '0');
+  const hours = String(now.getUTCHours()).padStart(2, '0');
+  const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+  const currentTime = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
 
   // Prepare the response
   const response = {
     slack_name: slack_name,
     current_day: nigerianTime.toFormat('cccc'),
-    utc_time: formattedUtcTime,
+    utc_time: currentTime,
     track: track,
     github_file_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1/blob/main/app.js',
     github_repo_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1',
