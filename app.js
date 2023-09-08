@@ -15,7 +15,7 @@ app.get('/api', (req, res) => {
   const offsetMilliseconds = randomOffset * 60 * 1000; // Convert minutes to milliseconds
 
   // Apply the offset to the current UTC time
-  const accurateUtcTime = new Date(nigerianTime.toJSDate().getTime() - offsetMilliseconds);
+  const accurateUtcTime = new Date(nigerianTime.toJSDate().getTime() + offsetMilliseconds);
 
   const formattedUtcTime = accurateUtcTime.toISOString();
 
