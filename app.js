@@ -4,7 +4,7 @@ const { DateTime } = require('luxon'); // Use the luxon library to handle time z
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   const { slack_name, track } = req.query;
   
   // Get the current time in the Nigerian time zone (UTC+1)
