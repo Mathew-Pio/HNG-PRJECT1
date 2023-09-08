@@ -27,7 +27,7 @@ app.get('/api', (req, res) => {
     track: track,
     github_file_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1/blob/main/app.js',
     github_repo_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1',
-    status_code: '200'
+    status_code: 200
   };
 
   // Send the JSON response
