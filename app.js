@@ -9,12 +9,14 @@ app.get('/api', (req, res) => {
   
   // Get the current time in the Nigerian time zone (UTC+1)
   const nigerianTime = DateTime.now().setZone('Africa/Lagos');
+
+  const formattedUtcTime = nigerianTime.toFormat('yyyy-MM-dd\'T\'HH:mm:ss\'Z\'');
   
   // Prepare the response
   const response = {
     slack_name: slack_name,
     current_day: nigerianTime.toFormat('cccc'),
-    utc_time: nigerianTime.toISO(),
+    utc_time: formattedUtcTime,
     track: track,
     github_file_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1/blob/main/app.js',
     github_repo_url: 'https://github.com/Mathew-Pio/HNG-PRJECT1',
